@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pro Manager Dashboard</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="manifest" href="manifest.json"/>
+</head>
+
+<body>
+
+<div id="app">
+
+<!-- AUTH -->
+<div id="auth" class="center">
+  <div class="card">
+    <h2>Pro Dashboard</h2>
+
+    <input id="email" placeholder="Email"/>
+    <input id="password" type="password" placeholder="Password"/>
+
+    <button id="login">Login</button>
+    <button id="register">Register</button>
+
+    <p id="msg"></p>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="dashboard" class="hidden">
+
+<header>
+  <h2>Dashboard</h2>
+
+  <div class="row">
+    <button id="darkMode">🌙</button>
+    <button id="logout">Logout</button>
+  </div>
+</header>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="card">Total: <span id="total">0</span></div>
+  <div class="card">Active: <span id="active">0</span></div>
+  <div class="card">Done: <span id="done">0</span></div>
+  <div class="card">Online: <span id="online">0</span></div>
+</section>
+
+<!-- AI ASSISTANT -->
+<section class="card">
+  <h3>AI Assistant</h3>
+  <input id="aiInput" placeholder="e.g. create marketing plan"/>
+  <button id="aiBtn">Generate Tasks</button>
+</section>
+
+<!-- CREATE -->
+<section class="card">
+  <input id="title" placeholder="Title"/>
+  <textarea id="desc"></textarea>
+
+  <select id="status">
+    <option value="active">Active</option>
+    <option value="done">Done</option>
+  </select>
+
+  <button id="add">Add</button>
+</section>
+
+<!-- BOARD (KANBAN) -->
+<section class="board">
+
+  <div class="column">
+    <h3>Active</h3>
+    <div id="activeCol" class="dropzone"></div>
+  </div>
+
+  <div class="column">
+    <h3>Done</h3>
+    <div id="doneCol" class="dropzone"></div>
+  </div>
+
+</section>
+
+</div>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

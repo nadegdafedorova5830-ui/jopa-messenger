@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+
+:root {
+  --bg: #f4f4f4;
+  --text: #111;
+  --card: white;
+}
+
+.dark {
+  --bg: #0f172a;
+  --text: #fff;
+  --card: #1e293b;
+}
+
+.center {
+  height: 100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.card {
+  background: var(--card);
+  padding: 15px;
+  margin: 10px;
+  border-radius: 12px;
+}
+
+input, textarea, select {
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px;
+}
+
+button {
+  padding: 8px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.dropzone {
+  min-height: 200px;
+  padding: 10px;
+}
+
+.task {
+  background: #3b82f6;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: grab;
+}
+.hidden { display:none; }
